@@ -6,18 +6,12 @@
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 	<title>$Title</title>
 </head>
-<body class="loading cms" data-frameworkpath="$ModulePath(silverstripe/framework)"
+<body class="loading cms" data-frameworkpath="$ModulePath('silverstripe/framework')"
 	data-member-tempid="$CurrentMember.TempIDHash.ATT" <% if $GraphQLLegacy %>data-graphql-legacy="1"<% end_if %>
 >
     <% include SilverStripe\\Admin\\CMSLoadingScreen %>
 
-    <% if $FeatureFlag('Betamask') %>
-        <% include SilverStripe\\Admin\\TopBar %>
-    <% end_if %>
-
-    <% if not $FeatureFlag('Betamask') %>
-        <% include SilverStripe\\Admin\\FeatureFlag\\Messages %>
-    <% end_if %>
+    <% include SilverStripe\\Admin\\TopBar %>
 
 	<div class="cms-container" data-layout-type="custom">
 		$Menu

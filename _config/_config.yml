@@ -8,15 +8,3 @@ SilverStripe\Admin\LeftAndMain:
     - SilverStripe\Betamask\Extension\LeftAndMain
   admin_themes:
     - 'silverstripeltd/betamask:/templates'
-
----
-Name: betamask_featureflag
-After: featureflag
----
-# Features enable/disable by each CMS user
-SilverStripe\FeatureFlag\Extension\MemberConfiguration:
-  features:
-    FeatureFlag_Betamask:
-      Label: 'Betamask'
-      Help: |
-        Enabling this feature will change the CMS UI to preview the new look for Silverstripe CMS 6.
