@@ -8,3 +8,7 @@ SilverStripe\Admin\LeftAndMain:
     - SilverStripe\Betamask\Extension\LeftAndMain
   admin_themes:
     - 'silverstripeltd/betamask:/templates'
+  extra_requirements_css:
+    - 'silverstripeltd/betamask: client/dist/cms-refresh.css'
+  extra_requirements_javascript:
+    - 'silverstripeltd/betamask: client/dist/cms-refresh.js'

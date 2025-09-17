@@ -4,7 +4,6 @@ namespace SilverStripe\Betamask\Extension;
 
 use SilverStripe\Core\Environment;
 use SilverStripe\Core\Extension;
-use SilverStripe\View\Requirements;
 use SilverStripe\View\TemplateGlobalProvider;
 
 class LeftAndMain extends Extension implements TemplateGlobalProvider
@@ -17,12 +16,6 @@ class LeftAndMain extends Extension implements TemplateGlobalProvider
         self::ENV_DEV => 'dev',
         'live' => 'prod',
     ];
-
-    public function init(): void
-    {
-        Requirements::css('silverstripeltd/betamask: client/dist/cms-refresh.css');
-        Requirements::javascript('silverstripeltd/betamask: client/dist/cms-refresh.js');
-    }
 
     public static function getEnvironmentLabel(): string
     {
